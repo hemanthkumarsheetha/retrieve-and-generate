@@ -1,0 +1,42 @@
+[project]
+name = "retrieve-and-generate"
+version = "0.1.0"
+description = "A RAG application with FastAPI and Streamlit"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi==0.116.1",
+    "uvicorn==0.35.0",
+    "python-multipart==0.0.20",
+    "google-genai==1.28.0",
+    "pymilvus==2.5.14",
+    "pypdf==5.9.0",
+    "langchain==0.3.27",
+    "langchain-core==0.3.72",
+    "langchain-text-splitters==0.3.9",
+    "streamlit==1.47.1",
+    "python-dotenv==1.1.1",
+    "pydantic==2.11.7",
+    "numpy==2.3.2",
+    "pandas==2.3.1",
+    "requests==2.32.4",
+    "httpx==0.28.1",
+    "orjson==3.11.1",
+    "cachetools==5.5.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ipdb==0.13.13",
+    "ipython==9.4.0",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "ipdb==0.13.13",
+    "ipython==9.4.0",
+]
+
+[tool.uv.sources]
