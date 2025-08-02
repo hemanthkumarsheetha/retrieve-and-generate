@@ -4,6 +4,7 @@ import asyncio
 import sys
 import os
 
+# Added this cause of some weird import issues
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.services.rag.retrieve import create_embeds_for_single_pdf_file
