@@ -10,12 +10,26 @@ Install dependencies using uv:
 uv sync
 ```
 
+## Configuration
+
+Before running the application, you need to add your credentials in `src/__init__.py`:
+
+```python
+# API Configuration
+API_KEY="your-api-key"
+GEMINI_API_KEY="your-gemini-api-key"
+DEBUG=False
+CLUSTER_ENDPOINT="your-milvus-cluster-endpoint"
+TOKEN="your-gemini-token"
+COLLECTION_NAME="your-collection-name"
+```
+
 ## Running the API
 
 Start the FastAPI server:
 
 ```bash
-uv run uvicorn src.app:app --reload --host 0.0.0.0 --port 8000
+uvicorn src.app:app --reload --host 0.0.0.0 --port 8000
 ```
 
 The API will be available at `http://localhost:8000`
@@ -66,7 +80,7 @@ Response:
 Launch the Streamlit web interface:
 
 ```bash
-uv run streamlit run streamlit/app.py
+streamlit run streamlit/app.py
 ```
 
 The Streamlit app will be available at `http://localhost:8501`
